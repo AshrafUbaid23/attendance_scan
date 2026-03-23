@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Barcode Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Include html5-qrcode library -->
+    <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="admin.html" class="nav-link" style="position: absolute; top: 1rem; right: 1.5rem; margin-top: 0; font-size: 0.8rem;">⚙️ Admin</a>
+        <header>
+            <h1>Attendance Scanner</h1>
+            <p>Scan student ID card below</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <!-- Autocomplete off to prevent suggestions covering UI -->
+                <input type="text" id="barcodeInput" placeholder="Scan Barcode Here..." autofocus autocomplete="off">
+            </div>
+            
+            <!-- Camera Scanner Reader -->
+            <div id="reader" style="width: 100%; max-width: 500px; margin: 1rem auto; padding-bottom: 0;"></div>
+            
+            <div id="statusMessage" class="status-message"></div>
+
+            <div class="log-section">
+                <h2>Recent Scans</h2>
+                <ul id="scanLog">
+                    <!-- Logs will be populated here via JavaScript -->
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

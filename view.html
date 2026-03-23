@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Barcode Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container dashboard-container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Attendance Data</h1>
+                <p>All records stored securely in your browser</p>
+            </div>
+            <div class="header-actions">
+                <button id="exportBtn" class="primary-btn export-btn">Export to Excel</button>
+                <button id="clearBtn" class="danger-btn">Clear Data</button>
+                <a href="index.html" class="nav-link nav-btn">Scanner</a>
+                <button id="logoutBtn" class="nav-link nav-btn logout">Logout</button>
+            </div>
+        </header>
+
+        <main class="table-container">
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th style="width: 10%;">#</th>
+                        <th>Student ID / Barcode</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data rendered via JS -->
+                </tbody>
+            </table>
+            <div id="emptyState" class="empty-state" style="display: none;">
+                No attendance records found yet. Go scan some barcodes!
+            </div>
+        </main>
+    </div>
+    <script src="view.js"></script>
+</body>
+</html>

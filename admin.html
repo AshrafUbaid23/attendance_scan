@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Barcode Attendance</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Access</h1>
+            <p>Enter the admin console to view logic</p>
+        </header>
+
+        <main>
+            <form id="adminForm" class="input-section">
+                <!-- Autocomplete off to prevent suggestions covering UI -->
+                <input type="password" id="adminPassword" placeholder="Enter Password..." autofocus autocomplete="off">
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+            
+            <div id="loginStatus" class="status-message"></div>
+            
+            <a href="index.html" class="nav-link">Return to Scanner</a>
+        </main>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
